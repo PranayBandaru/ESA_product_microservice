@@ -1,31 +1,29 @@
 'use strict'
+//Connect to MongoDB Database
+const mongoose = require("mongoose");
+mongoose.connect("mongodb+srv://admin:admin@cluster0.at51m.mongodb.net/Product_microservice?retryWrites=true&w=majority",
+    {useNewUrlParser:  true,
+    useFindAndModify: false,
+    useUnifiedTopology:  true,}).then(() => {
+        console.log("Connected to Database");
+}, 
+err => {
+    {
+        console.log("Error: ", err);
+    }
+});
 
-// import DB connection
-require("./databaseConnection");
-
-// require express
 const express = require("express");
-
-// create express app
 const app = express();
-
-// import API route
-var routes = require('./api/routes'); //importing route
-
-// define port to run express app
-const port = process.env.PORT || 3000;
-
-// use middleware on express app
+var routes = require('./api/routes'); 
+const port = 3000;
 app.use(express.json());
 
 routes(app);
-
-// Add endpoint
 app.get('/', (req, res) => {
-    res.send("Product Microservice. Refer provided documentation for usage.");
+    res.send("Product Microservice");
 });
 
-// Listen to server
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running on http://localhost:${port}`);
 });
