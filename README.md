@@ -93,6 +93,7 @@ Example successful response:
     }
 ]
 ```
+An alert that all the products were listed is also shown in the terminal.
 
 #### Update a product
 This will find a product by provided id and will update that product in the database.
@@ -125,6 +126,7 @@ Example successful response:
     "__v": 0
 }
 ```
+The updated product details can also be seen in the terminal.
 
 #### Delete a product
 This will find a product by provided id param and will delete that product in the database.
@@ -138,4 +140,5 @@ Example successful response:
     "message": "Product successfully deleted."
 }
 ```
+The deleted product id can also be seen in the terminal.
 
