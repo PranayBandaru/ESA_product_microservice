@@ -1,9 +1,9 @@
 # ESA_product_microservice
  An E-commerce back-end microservice designed to facilitate product/inventory management needs of a business.
  
-## Technologies used:
- Node.js
- ExpressJS
+## Technologies used
+ Node.js <br />
+ ExpressJS <br />
  Database: MongoDB
  
 ## Lisence
